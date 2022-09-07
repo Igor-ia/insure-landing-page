@@ -14,10 +14,14 @@ export default function Main() {
     const [isOpen, setIsOpen] = useState(false);
 
     function handleMobileMenu() {
+        const body = document.body;
         if (isOpen) {
             setIsOpen(false);
+            body.style.overflow = 'visible';
         } else {
             setIsOpen(true);
+            body.style.overflow = 'hidden';
+
         }
     }
     return (
